@@ -1,0 +1,24 @@
+{
+  "name": "tienda-online-dupla2",
+  "version": "1.0.0",
+  "description": "A traves de esta aplicacion se realiza la conexion con la API de ML para desarrollar una tienda online propia",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan-sotelo/Tecla-tienda-online-dupla2.git"
+  },
+  "author": "Jair Serralde, Daniel Sotelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dan-sotelo/Tecla-tienda-online-dupla2/issues"
+  },
+  "homepage": "https://github.com/dan-sotelo/Tecla-tienda-online-dupla2#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
