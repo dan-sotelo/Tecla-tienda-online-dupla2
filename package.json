@@ -4,7 +4,8 @@
   "description": "A traves de esta aplicacion se realiza la conexion con la API de ML para desarrollar una tienda online propia",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,12 @@
   },
   "homepage": "https://github.com/dan-sotelo/Tecla-tienda-online-dupla2#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-rate-limit": "^5.3.0",
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.12"
   }
 }
