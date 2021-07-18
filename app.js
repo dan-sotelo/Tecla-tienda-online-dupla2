@@ -16,5 +16,16 @@ app.listen(process.env.PORT, () => {
     console.log(`El servidor se ha iniciado correctamente en: ${process.env.HOST}:${process.env.PORT}`)
 });
 
+//Middleware para capturar de errores
+app.use((error, req,res,next)=> {
+    if (error) {
+        console.log(error)
+        if (!res.headersSent) {
+            res.status(500).send("Error en el servidor: " + error.message)
+        }
+    }
+    next()
+})
+
 // Inicialización de las rutas
 appRutas(app);

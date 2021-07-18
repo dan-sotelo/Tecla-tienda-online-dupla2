@@ -12,28 +12,43 @@ async function getApi(url){
 module.exports = (app) => {
 
     app.get('/', async(req,res) => {
-        async function getRespuesta(){
-            const respuesta = await getApi(process.env.CATEGORIAS);
-            return respuesta;
+        try {
+            async function getRespuesta(){
+                const respuesta = await getApi(process.env.CATEGORIAS);
+                return respuesta;
+            }
+            res.status(200).send(await getRespuesta());
+        } catch (error) {
+            console.log('Error en el método GET de la app');
+            res.status(400).json(error.message);
         }
-        res.status(200).send(await getRespuesta());
     });
 
     app.get('/:idSubcategoria', async(req,res)=>{
-        const idSubcategoria = req.params.idSubcategoria;
-        async function getRespuesta(){
-            let respuesta = await getApi(process.env.SUBCATEGORIAS+idSubcategoria);
-            return respuesta;
+        try {
+            const idSubcategoria = req.params.idSubcategoria;
+            async function getRespuesta(){
+                let respuesta = await getApi(process.env.SUBCATEGORIAS+idSubcategoria);
+                return respuesta;
+            }
+            res.status(200).send(await getRespuesta());
+        } catch (error) {
+            console.log('Error en el método GET de la app');
+            res.status(400).json(error.message);
         }
-        res.status(200).send(await getRespuesta());
     });
 
     app.get('/subcategoria/:idProductos', async(req,res)=>{
-        const idProductos = req.params.idProductos;
-        async function getRespuesta(){
-            let respuesta = await getApi(process.env.PRODUCTOS+idProductos);
-            return respuesta;
+        try {
+            const idProductos = req.params.idProductos;
+            async function getRespuesta(){
+                let respuesta = await getApi(process.env.PRODUCTOS+idProductos);
+                return respuesta;
+            }
+            res.status(200).send(await getRespuesta());            
+        } catch (error) {
+            console.log('Error en el método GET de la app');
+            res.status(400).json(error.message);
         }
-        res.status(200).send(await getRespuesta());
     });
 }
