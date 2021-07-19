@@ -24,11 +24,11 @@ module.exports = (app) => {
         }
     });
 
-    app.get('/:idSubcategoria', async(req,res)=>{
+    app.get('/:idCategoria', async(req,res)=>{
         try {
-            const idSubcategoria = req.params.idSubcategoria;
+            const idCategoria = req.params.idCategoria;
             async function getRespuesta(){
-                let respuesta = await getApi(process.env.SUBCATEGORIAS+idSubcategoria);
+                let respuesta = await getApi(process.env.SUBCATEGORIAS+idCategoria);
                 return respuesta;
             }
             res.status(200).send(await getRespuesta());
@@ -38,11 +38,11 @@ module.exports = (app) => {
         }
     });
 
-    app.get('/subcategoria/:idProductos', async(req,res)=>{
+    app.get('/subcategoria/:idSubcategoria', async(req,res)=>{
         try {
-            const idProductos = req.params.idProductos;
+            const idSubcategoria = req.params.idSubcategoria;
             async function getRespuesta(){
-                let respuesta = await getApi(process.env.PRODUCTOS+idProductos);
+                let respuesta = await getApi(process.env.PRODUCTOS+idSubcategoria);
                 return respuesta;
             }
             res.status(200).send(await getRespuesta());            
