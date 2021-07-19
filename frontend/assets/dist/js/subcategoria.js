@@ -49,10 +49,7 @@ botonSubcategoria.addEventListener("click", e => {
     if (e.target.classList.contains("btn-subcategoria")){
         const idsubcategoria= e.target.dataset.id
         localStorage.setItem('idsubcategoria', idsubcategoria)
-        // console.log(idsubcategoria)
-        // console.log("https://api.mercadolibre.com/sites/MLM/search?category="+idsubcategoria)    
-    
-    }  
+    }
 })
 
 

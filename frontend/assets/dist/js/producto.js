@@ -51,16 +51,4 @@ class Producto{
 
 
 const idsubcategoria = localStorage.getItem('idsubcategoria')
-Producto.obtenerProductos("http://localhost:3000/subcategoria/"+idsubcategoria)
-
-
-// const botonProducto = document.querySelector(".container")
-// botonProducto.addEventListener("click", e => {
-//     if (e.target.classList.contains("btn-producto")){
-//         const producto= e.target.dataset.id
-//         console.log(producto)
-//         // localStorage.setItem('producto', producto)
-//         // Producto.productoseleccionado()
-//     }  
-// })
-
+Producto.obtenerProductos("http://localhost:3000/subcategorias/"+idsubcategoria)

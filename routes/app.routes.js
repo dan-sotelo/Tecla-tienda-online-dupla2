@@ -38,7 +38,7 @@ module.exports = (app) => {
         }
     });
 
-    app.get('/subcategoria/:idSubcategoria', async(req,res)=>{
+    app.get('/subcategorias/:idSubcategoria', async(req,res)=>{
         try {
             const idSubcategoria = req.params.idSubcategoria;
             async function getRespuesta(){
