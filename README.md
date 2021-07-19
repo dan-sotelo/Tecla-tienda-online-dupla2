@@ -9,6 +9,7 @@ Para poder acceder al proyecto, es necesario seguir los siguientes pasos:
    las siguientes líneas de comando desde la terminal:
             
             npm init
+        
             npm install
 
 3. Después de instalar los modulos, es preciso inicializar el servidor al ejecutar la siguiente línea de comando:
