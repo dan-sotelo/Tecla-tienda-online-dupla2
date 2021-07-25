@@ -34,7 +34,7 @@ class Categoria{
 }
 
 document.addEventListener("DOMContentLoaded", e => 
-Categoria.obtenerCategorias('http://localhost:3000/'));
+Categoria.obtenerCategorias('http://localhost:3000/categoria'));
 
 const botonCategoria = document.querySelector(".navbar-collapse")
 botonCategoria.addEventListener("click", e => {

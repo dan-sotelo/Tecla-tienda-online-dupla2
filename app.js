@@ -5,27 +5,28 @@ require('dotenv').config();
 const appRutas = require('./routes/app.routes');
 const cors = require('cors');
 const midd = require('./midd/midd');
+const sequelize = require('./db/conection')
 
 // Configuración de nuestro servidor (Middlewares globales)
 app.use(express.json());
 app.use(cors());
 app.use(midd.limite);
 
-// Inicializamos nuestro servidor
-app.listen(process.env.PORT, () => {
-    console.log(`El servidor se ha iniciado correctamente en: ${process.env.HOST}:${process.env.PORT}`)
-});
-
-//Middleware para capturar de errores
-app.use((error, req,res,next)=> {
-    if (error) {
-        console.log(error)
-        if (!res.headersSent) {
-            res.status(500).send("Error en el servidor: " + error.message)
-        }
+// Inicializar el servidor
+async function iniciarServidor(){
+    try {
+        await sequelize.authenticate();
+        console.log('Se establecio una conección exitosa con la base de datos');
+        app.listen(process.env.PORT, () => {
+            console.log(`El servidor se ha iniciado correctamente en: ${process.env.HOST}:${process.env.PORT}`)
+        });
+    }catch(error) {
+        console.log(`No se conecto con  la base de datos: ${error}`);
     }
-    next()
-})
+}
+
+iniciarServidor();
+
 
 // Inicialización de las rutas
 appRutas(app);

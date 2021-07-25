@@ -51,4 +51,4 @@ class Producto{
 
 
 const idsubcategoria = localStorage.getItem('idsubcategoria')
-Producto.obtenerProductos("http://localhost:3000/subcategorias/"+idsubcategoria)
+Producto.obtenerProductos("http://localhost:3000/subcategoria/"+idsubcategoria)

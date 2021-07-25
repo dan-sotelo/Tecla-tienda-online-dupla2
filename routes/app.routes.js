@@ -11,7 +11,7 @@ async function getApi(url){
 // Exportar los modulos
 module.exports = (app) => {
 
-    app.get('/', async(req,res) => {
+    app.get('/categoria', async(req,res) => {
         try {
             async function getRespuesta(){
                 const respuesta = await getApi(process.env.CATEGORIAS);
@@ -24,12 +24,12 @@ module.exports = (app) => {
         }
     });
 
-    app.get('/:idCategoria', async(req,res)=>{
+    app.get('/categoria/:idCategoria', async(req,res)=>{
         try {
             const idCategoria = req.params.idCategoria;
             async function getRespuesta(){
                 let respuesta = await getApi(process.env.SUBCATEGORIAS+idCategoria);
-                return respuesta;
+                return respuesta.children_categories;
             }
             res.status(200).send(await getRespuesta());
         } catch (error) {
@@ -38,12 +38,12 @@ module.exports = (app) => {
         }
     });
 
-    app.get('/subcategorias/:idSubcategoria', async(req,res)=>{
+    app.get('/subcategoria/:idSubcategoria', async(req,res)=>{
         try {
             const idSubcategoria = req.params.idSubcategoria;
             async function getRespuesta(){
                 let respuesta = await getApi(process.env.PRODUCTOS+idSubcategoria);
-                return respuesta;
+                return respuesta.results;
             }
             res.status(200).send(await getRespuesta());            
         } catch (error) {

@@ -42,7 +42,7 @@ class Subcategoria{
 
 
 const idcategoria = localStorage.getItem('idcategoria')
-Subcategoria.obtenerSubcategorias("http://localhost:3000/"+idcategoria)
+Subcategoria.obtenerSubcategorias("http://localhost:3000/categoria/"+idcategoria)
 
 const botonSubcategoria = document.querySelector(".container")
 botonSubcategoria.addEventListener("click", e => {
