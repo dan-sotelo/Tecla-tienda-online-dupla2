@@ -1,4 +1,5 @@
-// Importación de modulos necesarios a utilizar
+// VINCULO CON LA API DE ML
+// Importar los modulos necesarios a utilizar
 const fetch = require('node-fetch');
 
 // Funciones a emplear

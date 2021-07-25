@@ -1,5 +1,7 @@
+// Importar los modulos necesarios a utilizar
 const Sequelize = require('sequelize');
 
+// Exportar los modulos
 const sequelize = new Sequelize('clickStoreDB',null,null,{
     dialect: 'mssql',
     server: process.env.DB_HOST,

@@ -1,7 +1,7 @@
-// Importación de modulos necesarios a utilizar
+// Importar los modulos necesarios a utilizar
 const rateLimit = require('express-rate-limit')
 
-// Construcción y exportación de los modulos
+// Construir y exportar los modulos
 const limite = rateLimit({
     windowMs: 15 * 60 * 1000,
     max:15,

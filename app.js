@@ -1,4 +1,4 @@
-// Importación de modulos necesarios a utilizar
+// Importar de modulos necesarios a utilizar
 const express = require('express');
 const app = express();
 require('dotenv').config();
@@ -7,7 +7,7 @@ const cors = require('cors');
 const midd = require('./midd/midd');
 const sequelize = require('./db/conection')
 
-// Configuración de nuestro servidor (Middlewares globales)
+// Configurar el servidor (Middlewares globales)
 app.use(express.json());
 app.use(cors());
 app.use(midd.limite);
@@ -28,5 +28,5 @@ async function iniciarServidor(){
 iniciarServidor();
 
 
-// Inicialización de las rutas
+// Inicializar las rutas
 appRutas(app);
