@@ -3,6 +3,7 @@ En este repositorio se encuentra el proyecto realizado de backend y frontend par
 
 Para poder acceder al proyecto, es necesario seguir los siguientes pasos:
 1. Clonar el repositorio con la instrucción:
+
       git clone https://github.com/dan-sotelo/Tecla-tienda-online-dupla2.git
 
 2. Una vez clonado el repositorio en la ruta deseada, es necesario instalar los modulos de nuestro servidor al ejecutar 
