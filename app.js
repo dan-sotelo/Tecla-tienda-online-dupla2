@@ -5,7 +5,8 @@ require('dotenv').config();
 const appRutas = require('./routes/app.routes');
 const cors = require('cors');
 const midd = require('./midd/midd');
-const sequelize = require('./db/conection')
+const sequelize = require('./db/conection');
+const rutaUsuarios = require('./routes/user.routes');
 
 // Configurar el servidor (Middlewares globales)
 app.use(express.json());
@@ -30,3 +31,4 @@ iniciarServidor();
 
 // Inicializar las rutas
 appRutas(app);
+rutaUsuarios(app);
