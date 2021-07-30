@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>SIGN IN</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./assets/dist/css/form-validation.css" rel="stylesheet">
+  </head>
+
+
+<body class="bg-light">
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="./assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h2>BIENVENIDO</h2>
+        <p class="lead">Te damos la bienvenida, a continuación te solicitaremos algunos datos para continuar con tu registro y poder comprar tus productos favoritos, solo te tomara unos minutos.</p>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-12 col-lg-12">
+          <h4 class="mb-3">REGISTRO</h4>
+          <form class="needs-validation" id ="sign-in" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">Nombre(s)</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              </div>
+
+              <div class="col-12">
+                <label for="username" class="form-label">Nickname<span class="text-muted">(Opcional)</span></label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="username" placeholder="Nickname" required>
+                  <div class="invalid-feedback">
+                    Por favor, introduzca un nickname valido
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="date" class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="date" min="1960-01-01" max="2003-31-12" required>
+                <div class="invalid-feedback">
+                  Por favor, introduzca su fecha de nacimiento
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="phone" class="form-label">Telefono</label>
+                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <small>Ejemplo: 123-456-7890</small>
+                <div class="invalid-feedback">
+                  Por favor, introduzca un número telefonico valido
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Correo electronico</label>
+                <input type="email" class="form-control" id="email" placeholder="usuario@email.com" required>
+                <div class="invalid-feedback">
+                  Por favor, introduzca un correo electronico valido
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="txtpassword" class="form-label">Contraseña</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="txtPassword" placeholder="**********" required>
+                  <div class="invalid-feedback">
+                    Por favor, introduzca una contraseña
+                  </div>
+                  <div class="input-group-append">
+                    <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                  </div>
+                </div>
+              </div>
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Registrarse</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2017–2021 Click Store</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/dist/js/bootstrap.min.js"></script>
+  <script src="./assets/dist/js/form-validation.js"></script>
+  <script src="./assets/dist/js/registro.js"></script>
+</body>
+</html>
